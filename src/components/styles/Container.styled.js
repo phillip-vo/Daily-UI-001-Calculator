@@ -8,4 +8,5 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   background-color: ${({ backgroundColor }) => backgroundColor || "#ffffff"};
+  justify-content: ${({ justifyContent }) => justifyContent || "none"};
 `;

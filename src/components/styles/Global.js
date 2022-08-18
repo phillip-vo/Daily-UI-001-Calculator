@@ -17,8 +17,13 @@ const GlobalStyles = createGlobalStyle`
         background-color: ${({ theme }) => theme.colors.primary};
         height: 100vh;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    h1 {
+        color: #ffffff;
     }
     
 `;
