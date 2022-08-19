@@ -8,6 +8,7 @@ import { Input } from "./components/styles/Input.styled";
 import { Row } from "./components/styles/Row.styled";
 import * as math from "mathjs";
 import { Delete } from "./components/styles/Delete.styled";
+import { Menu } from "./components/styles/Menu.styled";
 
 export const theme = {
   colors: {
@@ -43,7 +44,10 @@ function App() {
             borderRadius="50px 50px 0 0"
             justifyContent="space-between"
           >
-            <Delete src=".\images\delete.png" alt="" onClick={handleDelete} />
+            <Row justifyContent="space-between">
+              <Menu src=".\images\dots.png" alt="" />
+              <Delete src=".\images\delete.png" alt="" onClick={handleDelete} />
+            </Row>
             <Input>{input}</Input>
           </Container>
           <Container
@@ -52,9 +56,20 @@ function App() {
             backgroundColor={theme.colors.light}
           >
             <Row>
-              <Button onClick={() => setInput("")}>C</Button>
-              <Button>+/-</Button>
-              <Button onClick={() => addToInput("%")}>%</Button>
+              <Button
+                backgroundColor={theme.colors.secondary}
+                border="1px solid #6B7AA1"
+                onClick={() => setInput("")}
+              >
+                C
+              </Button>
+              <Button backgroundColor={theme.colors.secondary}>+/-</Button>
+              <Button
+                backgroundColor={theme.colors.secondary}
+                onClick={() => addToInput("%")}
+              >
+                %
+              </Button>
               <Button
                 backgroundColor={theme.colors.primary}
                 color="#ffffff"

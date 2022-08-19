@@ -10,7 +10,7 @@ export const Button = styled.button`
   font-weight: lighter;
   border-radius: ${({ borderRadius }) => borderRadius || "50%"};
   cursor: pointer;
-  border: none;
+  border: ${({ border }) => border || "none"};
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 
   &:hover {
