@@ -7,6 +7,7 @@ import GlobalStyles from "./components/styles/Global";
 import { Input } from "./components/styles/Input.styled";
 import { Row } from "./components/styles/Row.styled";
 import * as math from "mathjs";
+import { Delete } from "./components/styles/Delete.styled";
 
 export const theme = {
   colors: {
@@ -27,6 +28,10 @@ function App() {
     setInput(math.evaluate(input));
   };
 
+  const handleDelete = () => {
+    setInput(input.slice(0, -1));
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <div className="app">
@@ -36,8 +41,9 @@ function App() {
           <Container
             height="194px"
             borderRadius="50px 50px 0 0"
-            justifyContent="flex-end"
+            justifyContent="space-between"
           >
+            <Delete src=".\images\delete.png" alt="" onClick={handleDelete} />
             <Input>{input}</Input>
           </Container>
           <Container

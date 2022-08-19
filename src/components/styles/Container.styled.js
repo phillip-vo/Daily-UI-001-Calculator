@@ -6,7 +6,7 @@ export const Container = styled.div`
   border-radius: ${({ borderRadius }) => borderRadius || "none"};
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: ${({ justifyContent }) => justifyContent || "space-evenly"};
   background-color: ${({ backgroundColor }) => backgroundColor || "#ffffff"};
-  justify-content: ${({ justifyContent }) => justifyContent || "none"};
+  align-items: flex-end;
 `;
